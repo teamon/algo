@@ -6,6 +6,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    = flash[:notice]
     = link_to "Pobierz", download_path
     = link_to "Kontakt", contact_path
     = yield
