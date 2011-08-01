@@ -1,9 +1,14 @@
 source 'http://rubygems.org'
 
+gem 'rake', '0.9.2'
 gem 'rails', '3.1.0.rc5'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
+
+gem 'haml', '3.0.25'
+gem 'inherited_resources', '~> 1.2.1'
+
 
 gem 'sqlite3'
 
