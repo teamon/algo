@@ -8,6 +8,12 @@ class HomeController < ApplicationController
   def contact
   end
 
+  def author
+  end
+
+  def book
+  end
+
   def process_contact
     ContactMailer.contact_email(params[:name], params[:email], params[:body]).deliver
     redirect_to root_path, :notice => "Wiadomość została wysłana"

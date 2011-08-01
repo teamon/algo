@@ -7,6 +7,8 @@
     = csrf_meta_tags
   %body
     = flash[:notice]
+    = link_to "O książce", book_path
+    = link_to "O autorze", author_path
     = link_to "Pobierz", download_path
     = link_to "Kontakt", contact_path
     = yield
