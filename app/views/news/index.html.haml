@@ -1,0 +1,6 @@
+.header
+  = link_to "Nowy njus", new_news_path, :class => "btn"
+%h2 Njusy
+%ul.pages
+  - @news.each do |news|
+    %li= link_to news.title, [:edit, news]

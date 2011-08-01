@@ -10,6 +10,10 @@ class NewsController < ApplicationController
 
   protect_from_forgery
 
+  actions :index, :edit, :update, :new, :create, :destroy
+
+  update! { collection_url }
+  create! { collection_url }
 
   protected
 
