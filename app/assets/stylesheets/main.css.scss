@@ -1,0 +1,91 @@
+@mixin rounded($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin boxshadow($params) {
+  -moz-box-shadow: $params;
+  -webkit-box-shadow: $params;
+  -o-box-shadow: $params;
+  bos-shadow: $params;
+}
+@mixin boxshadows($param1, $param2) {
+  -moz-box-shadow: $param1, $param2;
+  -webkit-box-shadow: $param1, $param2;
+  -o-box-shadow: $param1, $param2;
+  bos-shadow: $param1, $param2;
+}
+
+/* >> The Magnificent CLEARFIX: Updated to prevent margin-collapsing on child elements << j.mp/bestclearfix */
+section:before, div:before, article:before, nav:before, footer:before, ul:before,
+section:after, div:after, article:after, nav:after, footer:after, ul:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  visibility: hidden; }
+
+section:after, div:after, article:after, nav:after, footer:after, ul:after  {
+  clear: both; }
+
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+section, div, article, nav, footer, ul, table, tbody, thead, tr, th, td {
+  zoom: 1; }
+
+/***---footer stick---***/
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+}
+#container {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -53px !important;
+}
+footer, #pusher {
+height: 19px;
+padding: 15px 0;
+}
+/** background & default*/
+.vegas-background{ z-index: -100;}
+body{ background: #000; font-family: 'Play','Lucida Grande', 'Lucida Sans', Verdana, sans-serif; color: #fff; font-size: 13px;}
+
+/** logo font **/
+@font-face {
+    font-family: 'WCROUGHTRADBtaRegular';
+    src: url('/fonts/WC_RoughTrad-webfont.eot');
+    src: url('/fonts/WC_RoughTrad-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/WC_RoughTrad-webfont.woff') format('woff'),
+         url('/fonts/WC_RoughTrad-webfont.ttf') format('truetype'),
+         url('/fonts/WC_RoughTrad-webfont.svg#WCROUGHTRADBtaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/** layout **/
+#container,footer { width: 940px;}
+
+/** header **/
+header{ margin-top: 20px;
+  #logo a{ font-family: WCROUGHTRADBtaRegular, Verdana, Arial, sans-serif; font-size: 96px; text-shadow: 0 1px 5px #226; color: #fff; text-decoration: none; background: url('/images/logo.jpg') no-repeat center center #000; padding: 12px 4px; height: 152px; line-height: 152px; display: block; text-align: center; @include boxshadow(0 0 10px #000); @include rounded(5px);}
+  nav{ margin: 12px 0;
+   a{ display: inline-block; margin-right: 10px; width: 175px; border: 1px solid #000; background: #000; background: rgba(0,0,0,0.8); text-align: center; line-height: 32px; font-size: 18px; @include boxshadows(0 0 10px rgba(0,0,0,0.7), inset 0 0 5px rgba(0,0,0,0.8)); color: #fff; text-shadow: 0 0 1px rgba(255,255,255,0.7); text-decoration: none; font-family: 'Kelly Slab','Play','Lucida Grande', 'Lucida Sans', Verdana, sans-serif; @include rounded(5px);}
+   a:last-child{margin-right: 0;}
+   a:hover{ background: rgba(0,0,0,0.7); @include boxshadows(0 0 10px rgba(0,0,0,0.8), inset 0 0 8px rgba(0,0,0,1));text-shadow: 0 0 2px rgba(255,255,255,1); text-decoration: underline;}
+  }
+}
+/** content **/
+#content{
+  section.box {
+    padding: 10px 14px; border: 1px solid #000; background: #000; background: rgba(0,0,0,0.7); @include boxshadows(0 0 10px rgba(0,0,0,0.8), inset 0 0 8px rgba(0,0,0,1)); text-shadow: 0 0 2px rgb(0,0,0); text-shadow: 0 0 1px rgba(255,255,255,0.7); @include rounded(5px); margin: 10px 0;
+    h2{ font-size: 34px; line-height: 42px; text-shadow: 0 1px 2px #000;}
+    h3{ font-size: 22px; line-height: 28px; text-shadow: 0 1px 2px #000;}
+    p{ padding: 8px 0; font-size: 13px; }
+    small{ font-size: 10px;}
+  }
+}
+

@@ -1,14 +1,24 @@
 !!! html
 %html
   %head
-    %title Algo
+    %title Algorytm Snu
+    <link href='http://fonts.googleapis.com/css?family=Kelly+Slab|Play:400,700' rel='stylesheet' type='text/css'>
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
+    <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     = csrf_meta_tags
   %body
-    = flash[:notice]
-    = link_to "O książce", book_path
-    = link_to "O autorze", author_path
-    = link_to "Pobierz", download_path
-    = link_to "Kontakt", contact_path
-    = yield
+    #container
+      %header
+        %h1#logo= link_to 'Algorytm Snu', root_path
+        %nav
+          = link_to "Aktualności", root_path
+          = link_to "O książce", book_path
+          = link_to "O autorze", author_path
+          = link_to "Pobierz", download_path
+          = link_to "Kontakt", contact_path
+      %section#content 
+        = flash[:notice]
+        = yield
+      #pusher
+    %footer

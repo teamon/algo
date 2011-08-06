@@ -1,7 +1,11 @@
-index
+%section.box
+  %h2 Jakiś nagłówek na dzień dobry
+  %p Plus test normalnego tekstu, info powitalne czy łutewa.
 
 %ul
   - for news in @news
     %li
-      %span= news.title
-      %div= news.content
+      %section.box
+        %h3= news.title
+        %small= news.created_at.to_time.to_s(:long)
+        %div= news.content
