@@ -121,3 +121,12 @@ footer{
     a{ color: #ccc; text-decoration: underline}
     a:hover{ color: #fff; text-shadow: 0 0 2px #eee;}
 }
+
+p.mid {
+  text-align: center;
+  a { color: white; }
+}
+
+p.download a {
+  font-size: 15pt;
+}
