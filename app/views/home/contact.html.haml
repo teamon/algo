@@ -1,13 +1,13 @@
 %section.box
   = form_tag do
-    %p
+    .input.field
       = label_tag "Imie"
       = text_field_tag :name
-    %p
+    .input.field
       = label_tag "Email"
       = text_field_tag :email
-    %p
+    .input.text
       = label_tag "Treść"
       = text_area_tag :body
-    %p.actions
+    .input.actions
       = submit_tag "Wyślij"
