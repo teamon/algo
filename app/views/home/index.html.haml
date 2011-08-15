@@ -1,11 +1,14 @@
 %section.box
-  %h2 Jakiś nagłówek na dzień dobry
-  %p Plus test normalnego tekstu, info powitalne czy łutewa.
+  %h2 Algorytm snu - Maciej Mielcarek - Premiera już wkrótce!
 
-%ul
-  - for news in @news
-    %li
-      %section.box
-        %h3= news.title
-        %small= news.created_at.to_time.to_s(:long)
-        %div= news.content
+%section.box
+  %p.mid= image_tag "/AlgorytmSnuOkladka.png"
+
+- unless @news.empty?
+  %ul
+    - for news in @news
+      %li
+        %section.box
+          %h3= news.title
+          %small= news.created_at.to_time.to_s(:long)
+          %div= news.content

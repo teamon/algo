@@ -1,13 +1,16 @@
 %section.box
-  = form_tag do
-    %p
-      = label_tag "Imie"
-      = text_field_tag :name
-    %p
-      = label_tag "Email"
-      = text_field_tag :email
-    %p
-      = label_tag "Treść"
-      = text_area_tag :body
-    %p.actions
-      = submit_tag "Wyślij"
+  / = form_tag do
+  /   %p
+  /     = label_tag "Imie"
+  /     = text_field_tag :name
+  /   %p
+  /     = label_tag "Email"
+  /     = text_field_tag :email
+  /   %p
+  /     = label_tag "Treść"
+  /     = text_area_tag :body
+  /   %p.actions
+  /     = submit_tag "Wyślij"
+
+  %p.mid= link_to "algorytmsnu@gmail.com", "mailto:algorytmsnu@gmail.com"
+
