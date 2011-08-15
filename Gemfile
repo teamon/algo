@@ -12,6 +12,7 @@ gem 'inherited_resources', '~> 1.2.1'
 
 gem 'sqlite3'
 gem 'thin'
+gem 'therubyracer'
 
 
 # Gems used only for assets and not required
