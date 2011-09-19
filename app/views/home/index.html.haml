@@ -1,8 +1,3 @@
-%section.box
-  %h2 Algorytm snu - Maciej Mielcarek - Premiera już wkrótce!
-
-%section.box
-  %p.mid= image_tag "/AlgorytmSnuOkladka.png"
 
 - unless @news.empty?
   %ul
@@ -11,4 +6,10 @@
         %section.box
           %h3= news.title
           %small= news.created_at.to_time.to_s(:long)
-          %div= news.content
+          %div= simple_format news.content
+
+%section.box
+  %div{:style => "width: 640px; margin:auto"}
+    <iframe width="640" height="480" src="http://www.youtube.com/embed/hTi4bAFs4ig" frameborder="0" allowfullscreen></iframe>
+
+
